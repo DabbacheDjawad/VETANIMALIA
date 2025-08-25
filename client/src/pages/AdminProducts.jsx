@@ -11,7 +11,8 @@ export default function AdminProducts() {
   const [searchTerm, setSearchTerm] = useState("");
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const [loading, setLoading] = useState(true); // 🔹 Loader state
+  const [loading, setLoading] = useState(true);
+  const [deletingId, setDeletingId] = useState(null);
 
   // Fetch Products
   const fetchProducts = async () => {
@@ -46,6 +47,7 @@ export default function AdminProducts() {
 
   // Delete Product
   const handleDeleteProduct = async (id) => {
+    setDeletingId(id);
     try {
       await axios.delete(`http://localhost:3000/api/v1/products/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
@@ -55,16 +57,18 @@ export default function AdminProducts() {
       toast.success(t("adminProducts.toasts.deleted"));
     } catch (error) {
       toast.error(t("adminProducts.toasts.deleteError"));
+    }finally{
+      setDeletingId(null);
     }
   };
 
   const currency = t("products.currency");
 
-  // 🔹 Loader UI
+  // Loader UI
   if (loading) {
     return (
       <div className="flex h-screen w-full justify-center items-center bg-gray-50">
-        <div className="w-12 h-12 border-4 border-orange-500 border-dashed rounded-full animate-spin"></div>
+        <div className="w-12 h-12 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
       </div>
     );
   }
@@ -75,7 +79,6 @@ export default function AdminProducts() {
       style={{ fontFamily: "Kiwi Maru, serif" }}
     >
       <SideBar />
-
       <main className="flex-1 p-4 md:p-6">
         {/* Header + Add Product */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
@@ -125,7 +128,7 @@ export default function AdminProducts() {
                   {t("adminProducts.labels.price")}: {p.price} {currency}
                 </p>
                 <p className="text-sm text-gray-500">
-                  {t("adminProducts.labels.stock")}: {p.stock}
+                  {t("adminProducts.labels.stock")}: {p.available ? "Disponible" : "Indisponible"}
                 </p>
               </div>
               <div className="mt-4 flex space-x-2">
@@ -143,7 +146,11 @@ export default function AdminProducts() {
                   aria-label={t("adminProducts.a11y.delete", { name: p.name })}
                   title={t("adminProducts.a11y.delete", { name: p.name })}
                 >
-                  <FaTrash />
+                  {deletingId === p._id ? (
+  <div className="w-4 h-4 border-2 border-red-400 border-t-transparent rounded-full animate-spin"></div>
+) : (
+  <FaTrash />
+)}
                 </button>
               </div>
             </li>

@@ -12,6 +12,7 @@ export default function AddProductPage() {
   const [category, setCategory] = useState("");
   const [images, setImages] = useState([]);
   const [available, setAvailable] = useState(true);
+  const [submitting, setSubmitting] = useState(false);
 
   const handleImageChange = (e) => {
     if (e.target.files) {
@@ -26,6 +27,7 @@ export default function AddProductPage() {
 
   const addProduct = async (e) => {
     e.preventDefault();
+    setSubmitting(true);
     try {
       const token = localStorage.getItem("token");
       const formData = new FormData();
@@ -51,11 +53,16 @@ export default function AddProductPage() {
       toast.success(t("addProduct.toasts.success"));
     } catch (error) {
       toast.error(t("addProduct.toasts.error"));
+    } finally {
+      setSubmitting(false);
     }
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-8" style={{ fontFamily: "Kiwi Maru, serif" }}>
+    <div
+      className="max-w-3xl mx-auto p-8"
+      style={{ fontFamily: "Kiwi Maru, serif" }}
+    >
       <h1 className="text-2xl font-bold mb-6 p-4 rounded-t-lg">
         {t("addProduct.title")}
       </h1>
@@ -130,7 +137,9 @@ export default function AddProductPage() {
             onChange={(e) => setAvailable(e.target.checked)}
           />
           <label htmlFor="available">
-            {available ? t("addProduct.available") : t("addProduct.notAvailable")}
+            {available
+              ? t("addProduct.available")
+              : t("addProduct.notAvailable")}
           </label>
         </div>
 
@@ -185,7 +194,11 @@ export default function AddProductPage() {
           type="submit"
           className="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-400 transition"
         >
-          {t("addProduct.submit")}
+          {submitting ? (
+            <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mx-auto"></div>
+          ) : (
+            t("addProduct.submit")
+          )}
         </button>
       </form>
     </div>
