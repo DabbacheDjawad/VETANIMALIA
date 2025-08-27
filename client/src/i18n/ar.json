@@ -356,7 +356,10 @@
     "emergency": "في الحالات الطارئة، يرجى الاتصال على"
   },
   "catHotel": {
-    "hotelReservation": { "title": "حجز فندق القطط" },
+    "hotelReservation": { 
+      "title": "حجز فندق القطط",
+      "closed": "حاليًا، الحجوزات مغلقة."
+    },
     "form": {
       "checkInDate": "تاريخ الوصول",
       "checkOutDate": "تاريخ المغادرة",
@@ -606,6 +609,12 @@
     }
   },
   "reservationsAdmin": {
+    "settings": {
+      "success": "تم تحديث إعدادات الحجوزات بنجاح",
+      "error": "حدث خطأ أثناء تحديث إعدادات الحجوزات",
+      "lock": "غلق الحجوزات",
+      "unlock": "فتح الحجوزات"
+    },
     "title": "إدارة الحجوزات",
     "table": {
       "customer": "العميل",

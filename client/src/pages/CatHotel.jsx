@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import catHead from "../photo/imgs/cathomeu.png";
 import axios from "axios";
@@ -64,7 +64,7 @@ const InputFieldWithIcon = ({
 
 export default function HotelReservation() {
   const { t } = useTranslation();
-
+const [reservationsOpen, setReservationsOpen] = useState(true);
   const [formData, setFormData] = useState({
     checkInDate: "",
     checkOutDate: "",
@@ -98,6 +98,15 @@ export default function HotelReservation() {
   });
 
   const [errors, setErrors] = useState({});
+
+  useEffect(() => {
+    const fetchStatus = async () => {
+      const token = localStorage.getItem("token");
+      const { data } = await axios.get("http://localhost:3000/api/v1/settings" , {headers: {Authorization: `Bearer ${token}`}})
+      setReservationsOpen(data.reservationsOpen);
+    }
+    fetchStatus();
+  }, []);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -250,17 +259,20 @@ const handleSubmit = async (e) => {
 
   return (
     <main
-      className="max-w-[95%] mx-auto px-4 md:px-7.5 w-full box-content bg-white rounded-lg shadow-xl font-serif"
+      className={`max-w-[95%] mx-auto px-4 md:px-7.5 w-full box-content bg-white rounded-
+         shadow-xl font-serif `}
       style={{ fontFamily: "Kiwi Maru, serif" }}
     >
+
       <header className="py-6 relative">
         <h1 className="text-2xl md:text-3xl font-bold text-center md:text-start md:ml-32">
           {t("catHotel.hotelReservation.title")}
         </h1>
-        <img src={catHead} className="absolute w-40 left-40 top-19 max-xl:hidden" alt="" />
+        <h1 className="mt-10 text-center text-red-500 text-xl">{reservationsOpen ? "" : t("catHotel.hotelReservation.closed")}</h1>
+        <img src={catHead} className={`absolute w-40 left-40 top-19 max-xl:hidden ${reservationsOpen ? "" : "hidden"}`} alt="" />
       </header>
 
-      <section className="flex flex-col items-center mb-8">
+      <section className={`flex flex-col items-center mb-8 ${reservationsOpen ? "" : "hidden"}`}>
         {/* Dates row */}
         <div className="flex flex-row items-center justify-center gap-4 max-md:w-2/3 max-sm:w-full max-sm:text-sm max-md:text-sm md:gap-8 border-2 border-orange-300 rounded-full px-4 py-3 w-full max-w-2xl">
           <div className="flex flex-col items-start w-full md:w-auto">
@@ -329,7 +341,7 @@ const handleSubmit = async (e) => {
       <hr className="my-8 border-1" />
 
       {/* Form */}
-      <form onSubmit={handleSubmit} noValidate className="grid lg:grid-cols-2 gap-6">
+      <form onSubmit={handleSubmit} noValidate className={`grid lg:grid-cols-2 gap-6 ${reservationsOpen ? "" : "hidden"}`}>
         {/* Left Column */}
         <div className="space-y-6 w-full md:w-5/6 mx-auto flex flex-col">
           {/* Owner Information */}

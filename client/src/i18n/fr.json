@@ -367,7 +367,9 @@
   ,
   
   "catHotel": {
-    "hotelReservation": { "title": "Réservation d'hôtel pour chats" },
+    "hotelReservation": { 
+      "closed": "Les réservations sont actuellement fermées.",
+      "title": "Réservation d'hôtel pour chats" },
     "form": {
       "checkInDate": "Date de de départ",
       "checkOutDate": "Date de Retour",
@@ -617,6 +619,12 @@
     }
   },
    "reservationsAdmin": {
+    "settings": {
+      "success": "Paramètres des réservations mis à jour avec succès",
+      "error": "Erreur lors de la mise à jour des paramètres des réservations",
+      "lock": "Verrouiller les réservations",
+      "unlock": "Déverrouiller les réservations"
+    },
     "title": "Gestion des réservations",
     "table": {
       "customer": "Client",

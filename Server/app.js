@@ -27,6 +27,7 @@ const ordersRouter = require("./routes/orders");
 const appointmentsRouter = require("./routes/appointments");
 const dashboardRouter = require("./routes/Latest");
 const reservationRouter = require("./routes/reservations");
+const settingsRouter = require("./routes/settings");
 
 
 //error handler middleware
@@ -59,6 +60,7 @@ app.use("/api/v1/orders" ,ordersRouter);
 app.use("/api/v1/appointments", authMiddleware, appointmentsRouter);
 app.use("/api/v1/dashboard", authMiddleware, adminAuth, dashboardRouter);
 app.use("/api/v1/reservations",reservationRouter);
+app.use("/api/v1/settings", settingsRouter);
 
 //error handler middleware
 app.use(errorHandlerMiddleware);
