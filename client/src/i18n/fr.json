@@ -1,5 +1,5 @@
 {
-    "hero": {
+  "hero": {
     "altText": "Chien",
     "title1": "Cabinet vétérinaire",
     "title2": "VETANIMALIA",
@@ -69,11 +69,11 @@
     }
   },
   "tipsSection": {
-  "imageAlt": "chien",
-  "title": "Conseils pour vos animaux",
-  "description1": "Chez VITANIMALIA, nous reconnaissons que prodiguer des soins exceptionnels à votre compagnon animal va bien au-delà de la simple résolution de problèmes de santé immédiats. Notre section Conseils dédiée se présente comme une ressource complète et professionnellement élaborée, conçue pour vous donner les connaissances et les stratégies pratiques nécessaires afin de favoriser une vie de bien-être pour votre animal bien-aimé. Au sein de ces pages, vous découvrirez des articles approfondis et des éclairages d'experts couvrant un large éventail de sujets, méticuleusement rédigés par notre équipe de professionnels vétérinaires et de spécialistes du comportement animal.",
-  "description2": "Qu'il s'agisse de démystifier des méthodologies de dressage complexes et d'offrir des conseils nutritionnels fondés sur des preuves, ou de fournir des stratégies proactives pour l'enrichissement environnemental et la reconnaissance précoce de potentiels problèmes de santé, VITANIMALIA s'engage à vous donner la confiance et l'expertise nécessaires pour naviguer dans chaque aspect du parcours de vie de votre animal. Nous nous efforçons d'être votre partenaire de confiance pour cultiver un lien fort et sain avec votre animal, en assurant son bonheur et votre tranquillité d'esprit grâce à une prise de décision éclairée et une compréhension plus profonde de ses besoins uniques."
-},
+    "imageAlt": "chien",
+    "title": "Conseils pour vos animaux",
+    "description1": "Chez VITANIMALIA, nous reconnaissons que prodiguer des soins exceptionnels à votre compagnon animal va bien au-delà de la simple résolution de problèmes de santé immédiats. Notre section Conseils dédiée se présente comme une ressource complète et professionnellement élaborée, conçue pour vous donner les connaissances et les stratégies pratiques nécessaires afin de favoriser une vie de bien-être pour votre animal bien-aimé. Au sein de ces pages, vous découvrirez des articles approfondis et des éclairages d'experts couvrant un large éventail de sujets, méticuleusement rédigés par notre équipe de professionnels vétérinaires et de spécialistes du comportement animal.",
+    "description2": "Qu'il s'agisse de démystifier des méthodologies de dressage complexes et d'offrir des conseils nutritionnels fondés sur des preuves, ou de fournir des stratégies proactives pour l'enrichissement environnemental et la reconnaissance précoce de potentiels problèmes de santé, VITANIMALIA s'engage à vous donner la confiance et l'expertise nécessaires pour naviguer dans chaque aspect du parcours de vie de votre animal. Nous nous efforçons d'être votre partenaire de confiance pour cultiver un lien fort et sain avec votre animal, en assurant son bonheur et votre tranquillité d'esprit grâce à une prise de décision éclairée et une compréhension plus profonde de ses besoins uniques."
+  },
   "blogSection": {
     "title": "Blog",
     "subtitle": "N'oubliez pas de prendre soin de vos animaux !",
@@ -98,7 +98,7 @@
     "login": "Se connecter",
     "appointment": "Rendez-vous",
     "signup": "S'inscrire",
-    "logout" : "Se déconnecter",
+    "logout": "Se déconnecter",
     "dashboard": "Tableau de bord",
     "catHotel": "Hôtel des chats"
   },
@@ -146,7 +146,7 @@
     "join_us": "Rejoignez-Nous",
     "read_more": "Lire la suite",
     "join_button": "Rejoignez-Nous",
-    "our_story_desc": "Chez VETANIMALIA, nous sommes passionnés par le bien-être des animaux. Notre équipe dévouée s'engage à fournir les meilleurs soins possibles.",
+    "our_story_desc": "Notre cabinet vétérinaire est guidé par l’amour des animaux et leur bien-être. Disponible 24h/24, nous veillons à offrir des soins rapides et adaptés en toute circonstance. Nous associons expertise médicale, équipements modernes et accompagnement bienveillant. Notre priorité : garantir santé, confort et confiance à vos compagnons.",
     "join_us_desc": "Rejoignez notre équipe dynamique et contribuez à faire une différence dans la vie des animaux."
   },
   "contact": {
@@ -168,77 +168,77 @@
     "subject": "Sujet",
     "message": "Message",
     "send": "Envoyer le message",
-    "doctor_title":"Vétérinaire principal"
+    "doctor_title": "Vétérinaire principal"
   },
-"products": {
-  "title": "Nos Produits",
-  "searchImageAlt": "Recherche de produits",
-  "searchPlaceholder": "Que recherchez-vous ?",
-  "noProducts": "Aucun produit trouvé",
-  "currency": "DZD",
-  "categories": {
-    "all": "Tous",
-    "dogs": "Chiens",
-    "cats": "Chats",
-    "birds": "Oiseaux",
-    "fish": "Poissons",
-    "reptiles": "Reptiles"
-
-  }
-},
-"cart": {
-  "title": "Panier",
-  "catImageAlt": "Image de chat",
-  "headers": {
-    "name": "Nom",
+  "products": {
+    "title": "LEO PET",
+    "searchImageAlt": "Recherche de produits",
+    "searchPlaceholder": "Que recherchez-vous ?",
+    "noProducts": "Aucun produit trouvé",
+    "currency": "DZD",
+    "category" : "Catégorie",
+    "categories": {
+      "all": "Tous",
+      "dogs": "Chiens",
+      "cats": "Chats",
+      "birds": "Oiseaux",
+      "toys": "Jouets",
+      "accessories": "Accessoires"
+    }
+  },
+  "cart": {
+    "title": "Panier",
+    "catImageAlt": "Image de chat",
+    "headers": {
+      "name": "Nom",
+      "quantity": "Quantité",
+      "price": "Prix",
+      "remove": "Supprimer"
+    },
+    "currency": "DZD",
+    "emptyMessage": "Votre panier est vide",
+    "continueShopping": "Continuer vos achats",
+    "summary": {
+      "title": "Résumé",
+      "orderTotal": "Total des articles",
+      "delivery": "Frais de livraison",
+      "total": "Total"
+    },
+    "checkoutButton": "Passer la commande",
+    "item": "article",
+    "items": "articles"
+  },
+  "checkout": {
+    "title": "Paiement",
+    "dogImageAlt": "Image de chien",
+    "contactInfo": "Informations de contact",
+    "firstName": "Prénom",
+    "deliveryMethod1": "au Bureau",
+    "deliveryMethod2": "a Domicile",
+    "firstNamePlaceholder": "Prénom",
+    "lastName": "Nom de famille",
+    "lastNamePlaceholder": "Nom de famille",
+    "phoneNumber": "Numéro de téléphone",
+    "phonePlaceholder": "Numéro de téléphone",
+    "wilaya": "Wilaya",
+    "address": "Adresse",
+    "addressPlaceholder": "Adresse",
+    "deliveryCompanies": "Sociétés de livraison",
+    "deliveryCompaniesList": ["Yalidine", "DHD", "ZR express", "SARL express"],
+    "deliveryMethod": "Méthode de livraison",
+    "deliveryMethods": ["Domicile", "Bureau"],
+    "item": "article",
+    "items": "articles",
     "quantity": "Quantité",
-    "price": "Prix",
-    "remove": "Supprimer"
+    "total": "Total",
+    "subtotal": "Sous-total",
+    "deliveryService": "Service de livraison",
+    "currency": "DZD",
+    "orderButton": "Commander",
+    "successMessage": "Commande créée avec succès!",
+    "errorMessage": "Erreur lors de la création de la commande"
   },
-  "currency": "DZD",
-  "emptyMessage": "Votre panier est vide",
-  "continueShopping": "Continuer vos achats",
-  "summary": {
-    "title": "Résumé",
-    "orderTotal": "Total des articles",
-    "delivery": "Frais de livraison",
-    "total": "Total"
-  },
-  "checkoutButton": "Passer la commande",
-  "item": "article",
-  "items": "articles"
-},
-"checkout": {
-  "title": "Paiement",
-  "dogImageAlt": "Image de chien",
-  "contactInfo": "Informations de contact",
-  "firstName": "Prénom",
-  "deliveryMethod1" : "au Bureau",
-  "deliveryMethod2" : "a Domicile",
-  "firstNamePlaceholder": "Prénom",
-  "lastName": "Nom de famille",
-  "lastNamePlaceholder": "Nom de famille",
-  "phoneNumber": "Numéro de téléphone",
-  "phonePlaceholder": "Numéro de téléphone",
-  "wilaya": "Wilaya",
-  "address": "Adresse",
-  "addressPlaceholder": "Adresse",
-  "deliveryCompanies": "Sociétés de livraison",
-  "deliveryCompaniesList": ["Yalidine", "DHD", "ZR express", "SARL express"],
-  "deliveryMethod": "Méthode de livraison",
-  "deliveryMethods": ["Domicile", "Bureau"],
-  "item": "article",
-  "items": "articles",
-  "quantity": "Quantité",
-  "total": "Total",
-  "subtotal": "Sous-total",
-  "deliveryService": "Service de livraison",
-  "currency": "DZD",
-  "orderButton": "Commander",
-  "successMessage": "Commande créée avec succès!",
-  "errorMessage": "Erreur lors de la création de la commande"
-},
-  
+
   "table": {
     "orderId": "ID de commande",
     "customer": "Client",
@@ -266,7 +266,6 @@
     "no_account": "Pas encore de compte ?",
     "signup": "S'inscrire",
     "or": "ou"
-    
   },
   "signup": {
     "title": "Créer votre compte",
@@ -294,43 +293,54 @@
   "Services": {
     "title": "Nos Services",
     "subtitle": "Des soins complets et attentionnés pour vos compagnons à quatre pattes",
-    "radiography": "Radiographie et Échographie",
-    "surgery": "Chirurgie et Soins",
-    "vaccination": "Vaccination et Puce Électronique",
-    "consultation": "Consultation et Diagnostic",
-    "grooming": "Toilettage et Détartrage",
-    "nutrition": "Alimentation et Accessoires",
-    "emergency": "Urgences",
-    "hospitalization": "Hospitalisation et Gardiennage",
-    "radiography_item1": "Radiographies pour détecter les blessures internes ou les anomalies.",
-    "radiography_item2": "Échographies utilisées pour examiner les organes et tissus internes.",
-    "radiography_item3": "Méthodes non invasives offrant des résultats fiables.",
-    "surgery_item1": "Procédures chirurgicales mineures et complexes réalisées par des experts.",
-    "surgery_item2": "Soins postopératoires pour garantir une récupération rapide et efficace.",
-    "surgery_item3": "Gestion des douleurs et surveillance constante.",
-    "vaccination_item1": "Vaccins pour prévenir les maladies infectieuses et évitables.",
-    "vaccination_item2": "Implantation de puces électroniques pour identifier les animaux en toute sécurité.",
-    "vaccination_item3": "Suivi et conseils pour maintenir la santé préventive.",
-    "consultation_item1": "Examen physique complet pour détecter les problèmes de santé des animaux.",
-    "consultation_item2": "Analyse clinique et diagnostic précis.",
-    "consultation_item3": "Conseils médicaux adaptés pour un suivi personnalisé.",
-    "grooming_item1": "Toilettage complet (bain, coupe de poils, nettoyage des oreilles).",
-    "grooming_item2": "Nettoyage dentaire professionnel pour éliminer le tartre et prévenir les maladies buccales.",
-    "grooming_item3": "Services pour préserver la santé et l’apparence des animaux.",
-    "nutrition_item1": "Fourniture d’aliments adaptés aux besoins nutritionnels spécifiques.",
-    "nutrition_item2": "Accessoires de qualité tels que jouets, colliers et laisses.",
-    "nutrition_item3": "Conseils personnalisés pour le bien-être quotidien des animaux.",
+    "radiography": "🧼 Hygiène & Soins",
+    "surgery": "🍖 Alimentation",
+    "vaccination": "💊 Santé & Bien-être",
+    "consultation": "🐾 Produits & Accessoires Animaux",
+
+    "nutrition": "🏠 Habitat & Confort",
+
+    "hospitalization": "Hospitalisation",
+    "radiography_item1": "Shampooings & soins du pelage",
+    "radiography_item2": "Produits antiparasitaires (anti-puces, anti-tiques)",
+    "radiography_item3": "Nettoyage yeux & oreilles",
+    "radiography_item4": "Désinfectants & soins des plaies",
+    "radiography_item5": "Brosses & tondeuses",
+
+    "surgery_item1": "Croquettes pour chiens et chats",
+    "surgery_item2": "Lait maternisé pour chiots & chatons",
+    "surgery_item3": "Aliment humide (pâtées)",
+    "surgery_item4": "Friandises & récompenses",
+    "surgery_item5": "Compléments alimentaires",
+
+    "vaccination_item1": "",
+    "vaccination_item2": "",
+    "vaccination_item3": "",
+
+    "consultation_item1": "Colliers, harnais & laisses",
+    "consultation_item2": "Gamelles & distributeurs",
+    "consultation_item3": "Litières & bacs hygiéniques",
+    "consultation_item4": "Jouets & divertissement",
+    "consultation_item5": "Coussins, paniers & niches",
+    "consultation_item6": "Transport (caisses, sacs, cages)",
+
+    "nutrition_item1": "Maisons & arbres à chat",
+    "nutrition_item2": "Enclos & cages",
+    "nutrition_item3": "Accessoires d’intérieur & d’extérieur",
+
     "hospitalization_item1": "Services d’hospitalisation avec soins intensifs et surveillance vétérinaire.",
     "hospitalization_item2": "Hébergement confortable pour les animaux en convalescence.",
     "hospitalization_item3": "Gardiennage personnalisé en l’absence des propriétaires.",
+
     "catHotel": "Hôtel pour chats",
     "catHotel_item1": "Suites privées avec literie confortable",
     "catHotel_item2": "Temps de jeu quotidien et interaction sociale",
     "catHotel_item3": "Surveillance et soins 24h/24 et 7j/7",
-    "catHotel_alt": "Chambre luxueuse d'hôtel pour chats"
+    "catHotel_alt": "Chambre luxueuse d'hôtel pour chats",
 
-
-    
+    "health_item1": "vermifuge",
+    "health_item2": "vitamines et minéraux",
+    "health_item3": "produits pour articulations et mobilité"
   },
   "appointment": {
     "title": "Prendre un Rendez-vous",
@@ -345,31 +355,27 @@
       "bird": "Oiseau",
       "rodent": "Rongeur",
       "other": "Autre"
-      
-
     },
-      "success_message": "Rendez-vous confirmé avec succès !",
-      "sending": "Envoi de votre demande de rendez-vous...",
+    "success_message": "Rendez-vous confirmé avec succès !",
+    "sending": "Envoi de votre demande de rendez-vous...",
     "privacy_link": "Politique de confidentialité",
     "owner_placeholder": "Entrez le nom du propriétaire",
-        "pet_placeholder": "Entrez le nom de l'animal",
-        "date_placeholder": "Sélectionnez la date",
-        "breed_placeholder": "Sélection",
-    
+    "pet_placeholder": "Entrez le nom de l'animal",
+    "date_placeholder": "Sélectionnez la date",
+    "breed_placeholder": "Sélection",
 
-    "symptoms": "Symptômes / Raison de la Visite",    
+    "symptoms": "Symptômes / Raison de la Visite",
     "phone": "Téléphone",
     "symptoms_placeholder": "Symptômes / Raison de la visite",
     "privacy": "J'accepte la politique de confidentialité",
     "submit": "Confirmer le Rendez-vous",
     "emergency": "Pour les urgences, veuillez appeler directement le"
-  }
-  ,
-  
+  },
   "catHotel": {
-    "hotelReservation": { 
+    "hotelReservation": {
       "closed": "Les réservations sont actuellement fermées.",
-      "title": "Réservation d'hôtel pour chats" },
+      "title": "Réservation d'hôtel pour chats"
+    },
     "form": {
       "checkInDate": "Date de de départ",
       "checkOutDate": "Date de Retour",
@@ -398,7 +404,8 @@
       "breeds": {
         "angora": "Angora",
         "persian": "Persan",
-        "siamese": "Siamois"
+        "siamese": "Siamois",
+        "other": "Autre"
       },
       "age": "Âge (en années)",
       "numberOfCats": "Nombre de chats",
@@ -433,18 +440,18 @@
       "catNameRequired": "Le nom du chat est requis.",
       "numberOfCats": "Minimum 1.",
       "provideLastTreatment": "Veuillez indiquer la date du dernier traitement.",
+      "provideAge": "Veuillez indiquer l'âge du chat.",
       "mustAcceptTerms": "Vous devez accepter les conditions."
     },
     "alerts": {
       "reservationCaptured": "Réservation enregistrée ! Nous vous contacterons pour confirmation."
     },
     "buttons": { "reserveNow": "Réserver maintenant" }
-  }
-  ,
+  },
   "productDetails": {
     "description": "Description",
     "category": "Catégorie",
-    "addedToCart" : "produit ajouté au panier",
+    "addedToCart": "produit ajouté au panier",
     "id": "ID",
     "price": "Prix",
     "quantity": "Quantité",
@@ -460,9 +467,8 @@
       "main": "Image du produit",
       "cat": "Image de chat"
     }
-  }
-  ,
-   "addProduct": {
+  },
+  "addProduct": {
     "title": "Ajouter un nouveau produit",
     "labels": {
       "name": "Nom du produit",
@@ -490,7 +496,7 @@
       "preview": "Aperçu de l’image {{index}}"
     }
   },
-   "editProduct": {
+  "editProduct": {
     "title": "Modifier le produit",
     "labels": {
       "name": "Nom du produit",
@@ -549,10 +555,10 @@
       "delete": "Supprimer {{name}}"
     }
   },
-   "appointmentsAdmin": {
+  "appointmentsAdmin": {
     "title": "Rendez-vous",
     "loading": "Chargement des rendez-vous...",
-    "confirmDelete" : "Êtes-vous sûr de vouloir supprimer ce rendez-vous ?",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer ce rendez-vous ?",
     "table": {
       "id": "ID",
       "client": "Client",
@@ -581,7 +587,7 @@
       "delete": "Supprimer le rendez-vous {{id}}"
     }
   },
-   "dashboard": {
+  "dashboard": {
     "a11y": { "stats": "Statistiques du tableau de bord" },
     "cards": {
       "users": "Utilisateurs",
@@ -618,7 +624,7 @@
       "stats": "Erreur lors de la récupération des statistiques du tableau de bord"
     }
   },
-   "reservationsAdmin": {
+  "reservationsAdmin": {
     "settings": {
       "success": "Paramètres des réservations mis à jour avec succès",
       "error": "Erreur lors de la mise à jour des paramètres des réservations",
@@ -666,9 +672,11 @@
       "products": "Produits",
       "total": "Total",
       "status": "Statut",
-      "actions": "Actions"
+      "actions": "Actions",
+      "phone": "Téléphone"
     },
     "card": {
+      "date": "Date",
       "title": "Commande",
       "customer": "Client",
       "products": "Produits",
@@ -729,7 +737,7 @@
     "loading": "Chargement des détails de la réservation...",
     "error": "Échec du chargement de la réservation.",
     "none": "Aucune réservation trouvée.",
-    "title": "Détails de la réservation",
+    "title": "Détailles de la réservation",
     "period": {
       "title": "Période de réservation",
       "checkIn": "Arrivée",
@@ -767,4 +775,3 @@
     }
   }
 }
-

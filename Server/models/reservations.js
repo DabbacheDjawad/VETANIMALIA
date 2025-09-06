@@ -22,17 +22,15 @@ const ReservationSchema = new mongoose.Schema({
     sterilized: { type: Boolean, required: true },
     vaccinationNotebook: { type: String, enum: ["Updated", "Not updated"], required: true },
     antiParasiteTreatment: { type: Boolean, required: true },
-    lastTreatmentDate: { type: Date , required : true }
+    lastTreatmentDate: { type: Date }
   },
 
   healthProblems: {
     type : String,
-    required : true
   },
 
   usualFood: {
     type: String,
-    required: true
   },
 
   specialNotes: { type: String },

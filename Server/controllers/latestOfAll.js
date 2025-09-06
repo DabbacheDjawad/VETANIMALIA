@@ -12,7 +12,7 @@ const getDashboardData = async (req, res) => {
       .populate("user", "name email phone")
       .populate("products.product", "name")
       .sort({ createdAt: -1 })
-      .limit(5),
+      .limit(4),
     Appointment.find().sort({ createdAt: -1 }).limit(5),
   ]);
 

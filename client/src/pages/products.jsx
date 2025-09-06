@@ -98,9 +98,6 @@ export default function Products() {
             {cat}
           </button>
         ))}
-        <button className="mainOrange text-black px-3 text-center text-3xl py-1 rounded-full">
-          →
-        </button>
       </div>
 
       {/* Products Grid */}

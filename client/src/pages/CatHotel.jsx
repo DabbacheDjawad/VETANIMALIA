@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import catHead from "../photo/imgs/cathomeu.png";
+import catHead from "../photo/imgs/hotelcat.png";
 import axios from "axios";
 import {toast} from "sonner";
 
@@ -158,6 +158,8 @@ const [reservationsOpen, setReservationsOpen] = useState(true);
     if (!data.catInfo.numberOfCats || Number(data.catInfo.numberOfCats) < 1)
       e.numberOfCats = t("catHotel.errors.numberOfCats");
 
+    if(!data.catInfo.age) e.age = t("catHotel.errors.provideAge");
+
     if (data.catInfo.antiParasiteTreatment && !data.catInfo.lastTreatmentDate) {
       e.lastTreatmentDate = t("catHotel.errors.provideLastTreatment");
     }
@@ -250,10 +252,10 @@ const handleSubmit = async (e) => {
       },
     });
 
-    toast("✅ Reservation submitted successfully!");
+    toast("✅ reservation créée");
   } catch (error) {
     console.error("Error submitting reservation:", error);
-    toast("❌ Something went wrong while submitting.");
+    toast("❌ Une erreur s'est produite lors de la soumission.");
   }
 };
 
@@ -269,7 +271,7 @@ const handleSubmit = async (e) => {
           {t("catHotel.hotelReservation.title")}
         </h1>
         <h1 className="mt-10 text-center text-red-500 text-xl">{reservationsOpen ? "" : t("catHotel.hotelReservation.closed")}</h1>
-        <img src={catHead} className={`absolute w-40 left-40 top-19 max-xl:hidden ${reservationsOpen ? "" : "hidden"}`} alt="" />
+        <img src={catHead} className={`absolute w-33 left-35 top-19 max-xl:hidden ${reservationsOpen ? "" : "hidden"}`} alt="" />
       </header>
 
       <section className={`flex flex-col items-center mb-8 ${reservationsOpen ? "" : "hidden"}`}>
@@ -478,6 +480,7 @@ const handleSubmit = async (e) => {
                   <option value="Angora">{t("catHotel.form.breeds.angora")}</option>
                   <option value="Persian">{t("catHotel.form.breeds.persian")}</option>
                   <option value="Siamese">{t("catHotel.form.breeds.siamese")}</option>
+                  <option value="Other">{t("catHotel.form.breeds.other")}</option>
                 </select>
               </label>
             </div>
@@ -491,6 +494,8 @@ const handleSubmit = async (e) => {
                 placeholder={t("catHotel.form.age")}
                 value={formData.catInfo.age}
                 onChange={handleChange}
+                required
+                error={errors.age}
               />
 
               <InputFieldWithIcon

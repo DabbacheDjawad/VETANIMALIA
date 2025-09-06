@@ -204,7 +204,7 @@ export default function Reservations() {
                     {new Date(r.checkInDate).toLocaleDateString()} →{" "}
                     {new Date(r.checkOutDate).toLocaleDateString()} <br />
                     <FaClock className="inline mr-2 text-gray-400" />{" "}
-                    {r.estimatedArrival}
+                    {r.estimatedArrival.toLowerCase() === "morning" ? "Matin" : "Soir"}
                   </td>
                   <td className="px-4 py-4 text-sm text-gray-500">
                     <div className="flex space-x-2">

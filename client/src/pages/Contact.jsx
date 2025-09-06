@@ -38,22 +38,22 @@ const ContactPage = () => {
 
   const contactInfo = [
     {
-      icon: <FaMapMarkerAlt className="h-6 w-6 text-orange-400" />,
+      icon: <FaMapMarkerAlt className="h-6 w-6 text-[var(--mainOrange)]" />,
       title: t('contact.address'),
       content: t('contact.address_value')
     },
     {
-      icon: <FaPhone className="h-6 w-6 text-orange-400" />,
+      icon: <FaPhone className="h-6 w-6 text-[var(--mainOrange)]" />,
       title: t('contact.phone'),
       content: '0770807185'
     },
     {
-      icon: <FaClock className="h-6 w-6 text-orange-400" />,
+      icon: <FaClock className="h-6 w-6 text-[var(--mainOrange)]" />,
       title: t('contact.hours'),
       content: t('contact.hours_value')
     },
     {
-      icon: <FaEnvelope className="h-6 w-6 text-orange-400" />,
+      icon: <FaEnvelope className="h-6 w-6 text-[var(--mainOrange)]" />,
       title: t('contact.email'),
       content: 'cabinetvetanimalia@gmail.com'
     }
@@ -155,7 +155,7 @@ const ContactPage = () => {
         </section>
 
         {/* Emergency Banner */}
-        <section className="bg-orange-400 rounded-xl shadow-lg p-6 text-center mb-12">
+        <section className="mainOrange rounded-xl shadow-lg p-6 text-center mb-12">
           <h2 className="text-2xl font-bold text-white mb-2">{t('contact.emergency')}</h2>
           <p className="text-white text-lg">
             {t('contact.emergency_text')} <span className="font-bold">0770807185</span>
@@ -224,7 +224,7 @@ const ContactPage = () => {
             <div className="flex justify-end">
               <button
                 type="submit"
-                className="px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-orange-400 hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400"
+                className="px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white mainOrange hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400"
                 aria-label={t('contact.send')}
               >
                 {t('contact.send')}

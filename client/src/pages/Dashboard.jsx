@@ -124,7 +124,7 @@ export default function Dashboard() {
                 {latestOrders.map((order) => (
                   <div
                     key={order._id}
-                    className="min-w-[250px] bg-gray-50 rounded-lg p-3 shadow hover:shadow-md flex-shrink-0"
+                    className="min-w-[250px] bg-gray-100 rounded-lg p-3 shadow hover:shadow-md flex-shrink-0"
                   >
                     <h3 className="font-bold truncate">#{order._id}</h3>
                     <p className="text-sm text-gray-600 truncate">
@@ -165,7 +165,7 @@ export default function Dashboard() {
                 {latestUsers.map((user) => (
                   <div
                     key={user._id}
-                    className="min-w-[200px] bg-gray-50 rounded-lg p-3 shadow hover:shadow-md flex-shrink-0"
+                    className="min-w-[200px] bg-gray-100 rounded-lg p-3 shadow hover:shadow-md flex-shrink-0"
                   >
                     <h3 className="font-bold truncate">{user.name}</h3>
                     <p className="text-sm text-gray-600 truncate">

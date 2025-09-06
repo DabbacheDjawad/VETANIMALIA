@@ -130,10 +130,11 @@ export default function Orders() {
   }
 
   return (
-    <div className={`flex w-[90%] ${i18n.language === "fr" ? "ml-[5%]" : "mr-[5%]"} bg-gray-50 min-h-screen`} style={{ fontFamily: "Kiwi Maru, serif" }}>
+    <div className={`flex w-[90%] ${i18n.language === "fr" ? "ml-[5%]" : "mr-[5%]"} 
+    bg-gray-50 min-h-screen max-sm:ml-0 max-sm:mt-10`} style={{ fontFamily: "Kiwi Maru, serif" }}>
       <SideBar />
 
-      <div className="flex-1 p-6">
+      <div className="flex-1 p-6 max-sm:px-0 max-sm:w-[110%]">
         {/* Header */}
         <div className="bg-white p-4 md:p-6 rounded-xl shadow-sm border border-gray-200 mb-6">
           <h3 className="text-lg md:text-xl font-semibold">{t("ordersAdmin.title")}</h3>
@@ -158,7 +159,7 @@ export default function Orders() {
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>
-                {["id", "customer", "products", "total", "date", "status", "actions"].map((key) => (
+                {["id", "phone", "customer", "products", "total", "date", "status", "actions"].map((key) => (
                   <th
                     key={key}
                     className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
@@ -171,15 +172,16 @@ export default function Orders() {
             <tbody className="bg-white divide-y divide-gray-200">
               {filteredOrders.map((order) => (
                 <tr key={order._id} className="hover:bg-gray-50">
-                  <td className="px-4 py-4 text-sm font-medium text-gray-900">#{order._id}</td>
-                  <td className="px-4 py-4 text-sm text-gray-500">{order?.name || t("ordersAdmin.guest")}</td>
-                  <td className="px-4 py-4 text-sm text-gray-500">
+                  <td className="px-4 py-4 text-sm font-medium text-gray-500">#{order._id.slice(0 , 7)}</td>
+                  <td>0{order?.phoneNb || "N/A"}</td>
+                  <td className="px-4 py-4 text-sm text-gray-900">{order?.name || t("ordersAdmin.guest")}</td>
+                  <td className="px-4 py-4 text-sm text-gray-900">
                     {(order.products || [])
                       .map((p) => `${p?.product?.name} x ${p?.quantity}`)
                       .filter(Boolean)
                       .join(", ")}
                   </td>
-                  <td className="px-4 py-4 text-sm text-gray-500">
+                  <td className="px-4 py-4 text-sm text-gray-700">
                     {Number(order?.totalAmount || 0).toFixed(2)} {currency}
                   </td>
                   <td className="px-4 py-4 text-sm text-gray-500">
@@ -241,7 +243,7 @@ export default function Orders() {
                 {t("ordersAdmin.card.date")}: {new Date(order.createdAt).toLocaleDateString()}
               </p>
 
-              <div className="mt-3">
+              <div className="mt-3 flex justify-between">
                 <select
                   value={order.status}
                   onChange={(e) => handleStatusChange(order._id, e.target.value)}
@@ -256,17 +258,16 @@ export default function Orders() {
                     </option>
                   ))}
                 </select>
-              </div>
-
-              <button
+                              <button
                 onClick={() => handleDelete(order._id)}
                 className="mt-3 text-red-500 hover:text-red-700 text-sm font-medium cursor-pointer"
                 aria-label={t("ordersAdmin.a11y.delete")}
                 title={t("ordersAdmin.a11y.delete")}
               >
-                <MdDelete />
+                <MdDelete size={20} />
               </button>
-            </div>
+              </div>
+              </div>
           ))}
         </div>
       </div>
